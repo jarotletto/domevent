@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+html{ 
+    scroll-behavior: smooth;
+}
+*{ 
+    box-sizing: border-box;
+}
+body{ 
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: darkkhaki;
+}
+.navbar{ 
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: darkgoldenrod;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+}
+.brand{ 
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+.menuIcon{ 
+    margin-left: auto;
+    cursor: pointer;
+}
+.modalMenu{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display: none;
+    z-index: 200;
+}
+.closeIcons{
+    color: seashell;
+    font-size: 2rem;
+    position: absolute;
+    top: 15vh;
+    right: 10%;
+}
+.closeIcons:hover{ 
+    color: red;
+    cursor: pointer;
+}
+.modalMenu a{ 
+    text-decoration: none;
+    color: rgba(0,0,0,0.500);
+    font-size: 2rem;
+}
+.modalMenu a:hover{ 
+    color:seashell;
+    font-size: 2.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+.container{ 
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+}
+.container section{ 
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home{ 
+    gap: 20px;
+    background-attachment: fixed;
+}
+.ABOUT{
+    background-image: url(https:picsum.photos/seed/95/300);
+    background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+    justify-content: flex-start !important; 
+}
+.CONTACT{
+    background-image: url(https:picsum.photos/seed/75/300);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.rotateIcon{
+    font-size: 5rem;
+    animation-name: rotate;
+    animation-direction: 4;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.alertABOUT{
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color:darkgoldenrod;
+    position: sticky;
+    top: 10vh;
+}
+.homeImage{
+    width: 550px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 250px 250px 20px 250px;
+    box-shadow: 5px 6px 7px darkslategray;
+    animation-name: bottomtotop;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+.homeText{
+    font-size: 5rem;
+    color:darkgoldenrod;
+    animation-name: bottomtotop;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+    opacity: 0;
+}
+@keyframes bottomtotop{
+    from{
+        transform: translateX(-20vh);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0vh);
+        opacity: 5;
+    }
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
