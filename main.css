@@ -80,7 +80,8 @@ body{
 }
 .container section{ 
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,6 +98,7 @@ body{
     align-items: center;
     gap: 40px;
     height: 100%;
+    margin-bottom: auto;
 }
 .ABOUT{
     display: grid !important;
@@ -137,6 +139,34 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
+.SHOWCASE{
+    flex-direction: column;
+    justify-content: center;
+}
+.wrapper_showcase img{
+    border-radius: 0 50px 0 50px;
+    transition: 1.5s;
+}
+.wrapper_showcase img:hover{
+    border-radius: 10px;
+    cursor: pointer;
+}
+.showcase_tittle{
+    font-size: 3rem;
+
+}
+.wrapper_showcase{
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 40px;
+    border-radius: 100x 20px 100px 20px;
+}
+
+
 .rotateIcon{
     font-size: 5rem;
     animation-name: rotate;
